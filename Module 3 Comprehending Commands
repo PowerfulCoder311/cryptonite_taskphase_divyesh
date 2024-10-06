@@ -20,3 +20,80 @@ Connected!
 hacker@commands~grepping-for-a-needle-in-a-haystack:~$ grep pwn.college /challenge/data.txt
 pwn.college{U9mVn7sYsOWxuTzIUDY1qIco-sM.ddTM4QDLyATO0czW}
 
+3) touch command
+creates a file
+
+hacker@commands~touching-files:~$ cd /tmp
+hacker@commands~touching-files:/tmp$ touch pwn
+hacker@commands~touching-files:/tmp$ touch college
+hacker@commands~touching-files:/tmp$ /challenge/run
+Success! Here is your flag:
+pwn.college{wN9NbcZ98lK7kVML4MpMOgeG6ZJ.dBzM4QDLyATO0czW}
+hacker@commands~touching-files:/tmp$ 
+
+4) rm command
+removes the file
+
+hacker@commands~removing-files:~$ ls
+delete_me  i
+hacker@commands~removing-files:~$ rm delete-me
+rm: cannot remove 'delete-me': No such file or directory
+hacker@commands~removing-files:~$ rm delete_me
+hacker@commands~removing-files:~$ /challenge/check
+Excellent removal. Here is your reward:
+pwn.college{MUkVPueWhfQjMzDoI5Lbd4gCK2z.dZTOwUDLyATO0czW}
+hacker@commands~removing-files:~$ 
+
+5) -a flag 
+shows files 'hidden' by using '.' prefix
+
+hacker@commands~hidden-files:~$ cd /
+hacker@commands~hidden-files:/$ ls
+bin   challenge  etc   lib    lib64   media  nix  proc  run   srv  tmp  var
+boot  dev        home  lib32  libx32  mnt    opt  root  sbin  sys  usr
+hacker@commands~hidden-files:/$ ls -a
+.   .dockerenv            bin   challenge  etc   lib    lib64   media  nix  proc  run   srv  tmp  var
+..  .flag-28775106642455  boot  dev        home  lib32  libx32  mnt    opt  root  sbin  sys  usr
+hacker@commands~hidden-files:/$ cat .flag-28775106642455
+pwn.college{M8zKV_wHreV0FPTeq9LBaQG7htQ.dBTN4QDLyATO0czW}
+hacker@commands~hidden-files:/$ 
+
+6) ls command 
+lists the files
+
+Connected!                                                                        
+hacker@commands~listing-files:~$ cd /challenge
+hacker@commands~listing-files:/challenge$ ls
+11586-renamed-run-29078  DESCRIPTION.md
+hacker@commands~listing-files:/challenge$ ./ 11586-renamed-run-29078
+ssh-entrypoint: ./: Is a directory
+hacker@commands~listing-files:/challenge$ ./11586-renamed-run-29078
+Yahaha, you found me! Here is your flag:
+pwn.college{UBKC2UdbgpQi3BZKr8_kzaY9CNO.dhjM4QDLyATO0czW}
+hacker@commands~listing-files:/challenge$ 
+
+7)mkdir command
+makes a directory
+
+Connected!                                                                        
+hacker@commands~making-directories:~$ cd /
+hacker@commands~making-directories:/$ mkdir tmp
+mkdir: cannot create directory ‘tmp’: File exists
+hacker@commands~making-directories:/$ ls
+bin   challenge  etc   home  lib32  libx32  mnt  opt   root  sbin  sys  usr
+boot  dev        flag  lib   lib64  media   nix  proc  run   srv   tmp  var
+hacker@commands~making-directories:/$ cd tmp
+hacker@commands~making-directories:/tmp$ mkdir pwn
+hacker@commands~making-directories:/tmp$ cd /tmp/pwn
+hacker@commands~making-directories:/tmp/pwn$ touch college
+hacker@commands~making-directories:/tmp/pwn$ ls
+college
+hacker@commands~making-directories:/tmp/pwn$ /challenge/run
+Success! Here is your flag:
+pwn.college{sduTiv0JrKvzgqz3QMTC6Qw9QZL.dFzM4QDLyATO0czW}
+hacker@commands~making-directories:/tmp/pwn$ 
+
+
+
+
+
