@@ -1,0 +1,22 @@
+Challenges:
+1) cat command:
+reads the file given as arguement
+
+hacker@commands~cat-not-the-pet-but-the-command:~$ cat flag
+pwn.college{EvZhq8yXAJq9cQmJX4YRBndoWo8.dFzN1QDLyATO0czW}
+hacker@commands~cat-not-the-pet-but-the-command:~$
+
+hacker@commands~catting-absolute-paths:~$ cat /flag
+pwn.college{MwUYzfRSP8jrXC3IMJvXEyCrhZI.dlTM5QDLyATO0czW}
+hacker@commands~catting-absolute-paths:~$ 
+
+hacker@commands~more-catting-practice:~$ cat /lib/jvm/default-java/flag
+pwn.college{YXgFcpn2A3dgZhL8APTeO1-4hBA.dBjM5QDLyATO0czW}
+
+2) grep command 
+searches the file provided for given string
+
+Connected!                                                                        
+hacker@commands~grepping-for-a-needle-in-a-haystack:~$ grep pwn.college /challenge/data.txt
+pwn.college{U9mVn7sYsOWxuTzIUDY1qIco-sM.ddTM4QDLyATO0czW}
+
