@@ -1,5 +1,6 @@
 # testing heading 
 
-''' block code
+```
+block code
 hi 
-'''
+```
