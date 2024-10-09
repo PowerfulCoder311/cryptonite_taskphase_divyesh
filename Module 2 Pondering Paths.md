@@ -55,4 +55,50 @@ Here is your flag:
 pwn.college{MMWu1nP1xGlaRrbJqeN_wFG3Sb2.ddDN1QDLyATO0czW}
 hacker@paths~position-elsewhere:/home$ 
 ```
+### Position yet elsewhere
+Connected!                                                                        
+hacker@paths~position-yet-elsewhere:~$ /challenge/run
+Incorrect...
+You are not currently in the /var directory.
+Please use the `cd` utility to change directory appropriately.
+hacker@paths~position-yet-elsewhere:~$ cd /var
+hacker@paths~position-yet-elsewhere:/var$ /challenge/run
+Correct!!!
+/challenge/run is an absolute path, invoked from the right directory!
+Here is your flag:
+pwn.college{gjXsaP9hzVcjKmGTXYq-_FtThfE.dhDN1QDLyATO0czW}
+hacker@paths~position-yet-elsewhere:/var$ 
+
+### implicit relative paths, from /
+- running the files from current working directory and not using absolute path
+```
+Connected!                                                                        
+hacker@paths~implicit-relative-paths-from-:~$ /challenge/run
+Incorrect...
+You are not currently in the / directory.
+Please use the `cd` utility to change directory appropriately.
+hacker@paths~implicit-relative-paths-from-:~$ cd /
+hacker@paths~implicit-relative-paths-from-:/$ challenge/run
+Correct!!!
+challenge/run is a relative path, invoked from the right directory!
+Here is your flag:
+pwn.college{IsUwHIDmKGASGPgDnEQI-2dqWxB.dlDN1QDLyATO0czW}
+hacker@paths~implicit-relative-paths-from-:/$
+```
+### explicit relative paths, from /
+- '.' refers to the same directory. therefore './' means execute from the same directory
+```
+Connected!                                                                        
+hacker@paths~explicit-relative-paths-from-:~$ /challenge/run
+Incorrect...
+You are not currently in the / directory.
+Please use the `cd` utility to change directory appropriately.
+hacker@paths~explicit-relative-paths-from-:~$ cd /
+hacker@paths~explicit-relative-paths-from-:/$ ./challenge/run
+Correct!!!
+./challenge/run is a relative path, invoked from the right directory!
+Here is your flag:
+pwn.college{gHDuNDqXlzdrCW0LGdJVzBceLYr.dBTN1QDLyATO0czW}
+hacker@paths~explicit-relative-paths-from-:/$
+```
 
