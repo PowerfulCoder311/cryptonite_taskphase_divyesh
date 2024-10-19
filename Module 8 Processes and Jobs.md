@@ -174,6 +174,61 @@ pwn.college{gf1HsutCZWL9sQD7KvB15dpsgUR.ddDN4QDLyATO0czW}
 hacker@processes~backgrounding-processes:~$ 
 ```
 - ### foregrounding processes
+  foregrounding with fg
+```
+Connected!                                                                        
+hacker@processes~foregrounding-processes:~$ /challenge/run
+To pass this level, you need to suspend me, resume the suspended process in the 
+background, and *then* foreground it without re-suspending it! You can 
+background me with Ctrl-Z (and resume me in the background with 'bg') or, if 
+you're not ready to do that for whatever reason, just hit Enter and I'll exit!
+^Z
+[1]+  Stopped                 /challenge/run
+hacker@processes~foregrounding-processes:~$ bg
+[1]+ /challenge/run &
+
+
+
+Yay, I'm now running the background! Because of that, this text will probably 
+overlap weirdly with the shell prompt. Don't panic; just hit Enter a few times 
+to scroll this text out. After that, resume me into the foreground with 'fg'; 
+I'll wait.
+hacker@processes~foregrounding-processes:~$ fg
+/challenge/run
+YES! Great job! I'm now running in the foreground. Hit Enter for your flag!
+
+pwn.college{gVOWErUZs_zaAXDmz_Ev8nV58Cm.dhDN4QDLyATO0czW}
+hacker@processes~foregrounding-processes:~$
+```
+### Starting Backgrounded Processes
+- opening files directly in the background with the & operator
+```
+Connected!                                                                        
+hacker@processes~starting-backgrounded-processes:~$ /challenge/run &
+[1] 82
+
+
+
+hacker@processes~starting-backgrounded-processes:~$ Yay, you started me in the background! Because of that, this text will probably 
+overlap weirdly with the shell prompt, but you're used to that by now...
+
+Anyways! Here is your flag!
+pwn.college{sXkF5MX9g-Q6jsVwGD5wB-CsY6a.dlDN4QDLyATO0czW}
+
+```
+### Process Error Codes
+- displaying the error code of most recent command by echoing &?
+```
+Connected!                                                                        
+hacker@processes~process-exit-codes:~$ /challenge/get-code
+Exiting with an error code!
+hacker@processes~process-exit-codes:~$ echo $?
+52
+hacker@processes~process-exit-codes:~$ /challenge/submit-code 52
+CORRECT! Here is your flag:
+pwn.college{Uf_FwWPEONIhejpl1KmadwTZRhg.dljN4UDLyATO0czW}
+hacker@processes~process-exit-codes:~$ 
+```
   
   
 
