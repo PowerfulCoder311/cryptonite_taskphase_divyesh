@@ -24,3 +24,19 @@ Congratulations! You properly set the flag and 'win' has launched!
 pwn.college{cb8_PtKeN3vDqGZImSwi0rjNwVl.dVzNyUDLyATO0czW}
 hacker@path~setting-path:~$ 
 ```
+### Adding Commands
+- first creating shell file, making it executable then adding the directory of the
+  file to PATH without overwriting it and using /challenge/run to get the flag
+```
+Connected!                                                                        
+hacker@path~adding-commands:~$ touch win.sh
+hacker@path~adding-commands:~$ nano win.sh
+hacker@path~adding-commands:~$ mv win.sh win
+hacker@path~adding-commands:~$ chmod a+rwx win
+hacker@path~adding-commands:~$ PATH=$PATH:/home/hacker
+hacker@path~adding-commands:~$ /challenge/run
+Invoking 'win'....
+pwn.college{kOyn0SBhdmXxdFCcsMzKHTLTTUs.dZzNyUDLyATO0czW}
+hacker@path~adding-commands:~$ 
+```
+
