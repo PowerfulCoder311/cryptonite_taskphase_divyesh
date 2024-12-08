@@ -9,9 +9,12 @@ Unsuccessful decryption methods:
 - Hill Cipher
 - playfair cipher
 - foursquare cypher
+  
 Successful method: Shift Cipher
 Decrypted message:
+
 Instructions.txt -> TFTPDOESNTENCRYPTOURTRAFFICSOWEMUSTDISGUISEOURFLAGTRANSFER.FIGUREOUTAWAYTOHIDETHEFLAGANDIWILLCHECKBACKFORTHEPLAN
+
 Plan.txt -> IUSEDTHEPROGRAMANDHIDITWITH-DUEDILIGENCE.CHECKOUTTHEPHOTOS
 
 We see that the file has been hidden using the program and hidden inside the pictures. 
