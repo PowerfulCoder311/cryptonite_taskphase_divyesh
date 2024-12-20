@@ -68,4 +68,7 @@ if __name__ == "__main__":
     message = sys.argv[1]
     test(message, "trudeau")
 ```
-the if statement calls the test function. In the test function, p and q are fixed while a and b are random integers. However, in the encrypted file, a and b are given so it doesnt matter. 
+the if statement calls the test function. In the test function, p and q are fixed while a and b are random integers. However, in the encrypted file, a and b are given so it doesnt matter.
+Creating the decoding algorithms for dynamic_xor_encrypt and encrypt functions should be enough for retrieving the flag because I dont see any use of the generator function in retrieving the flag.
+
+
