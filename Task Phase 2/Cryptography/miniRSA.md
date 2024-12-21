@@ -12,13 +12,17 @@ e: 3
 ciphertext (c): 2205316413931134031074603746928247799030155221252519872649649212867614751848436763801274360463406171277838056821437115883619169702963504606017565783537203207707757768473109845162808575425972525116337319108047893250549462147185741761825125
 ```
 we know e=3
-for the encrypting the number, the formula is given by encrypted= plain-number^e * |N| \n
+for the encrypting the number, the formula is given by encrypted= plain-number^e * |N|   
+
 since e is only equal to 3, we can find the original number by finding the cube root. This is because c can be approximated by taking the inverse power of plain number when m^3 is less than N.
 This is known as **unpadded small-exponent attack.**
 
-For finding the cuberoot of c, I try to use a python program because normal functions dont support as large of a value.\n
-we get the cube root,\n
-m = 1.3016382529449107e+79 or 13016382529449106065894479374027604750406953699090365388202874238148389207291005 \n
+For finding the cuberoot of c, I try to use a python program because normal functions dont support as large of a value.  
+
+we get the cube root,  
+
+m = 1.3016382529449107e+79 or 13016382529449106065894479374027604750406953699090365388202874238148389207291005   
+
 converting this to ASCII, we get the flag
 flag -> picoCTF{n33d_a_lArg3r_e_606ce004}
 
