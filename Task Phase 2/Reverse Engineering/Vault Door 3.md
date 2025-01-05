@@ -58,7 +58,7 @@ So we have to input suitable text that when manipulated by the code returns jU5t
 My first approach is to reenter String input = userInput.substring("picoCTF{".length(), userInput.length() - 1); to see what it returns, however the code returns access denied. So, since this is java, we add a system.out.println() before the return statement to see what the output is.
 
 This gets us the flag.
-flag-> picoCTF{jU5t_a_s21mpl3_a4gr4m_4_u_c79a21}
+flag-> picoCTF{jU5t_a_s1mpl3_an4gr4m_4_u_c79a21}
 
 
 ```
